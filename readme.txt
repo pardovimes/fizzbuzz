@@ -1,3 +1,6 @@
+Stage 1
+-------
+
 Imagine the scene. You are eleven years old, and in the five minutes before the end of the lesson,
 your Maths teacher decides he should make his class more ?fun? by introducing a ?game?.
 
@@ -40,6 +43,9 @@ Fizz
 Buzz
 ... etc up to 100
 
+
+Stage 2
+-------
 
  * A number is fizz if it is divisible by 3 or if it has a 3 in it
  * A number is buzz if it is divisible by 5 or if it has a 5 in it
