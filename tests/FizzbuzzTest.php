@@ -1,6 +1,6 @@
 <?php
 
-class KataTest extends \PHPUnit\Framework\TestCase
+class FizzbuzzTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
