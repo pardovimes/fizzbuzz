@@ -28,9 +28,17 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
-    public function threeMustReturnThree()
+    public function threeMustReturnFizz()
     {
-        $this->assertEquals(3, $this->sut->convert(3));
+        $this->assertEquals('Fizz', $this->sut->convert(3));
+    }
+
+    /**
+     * @test
+     */
+    public function multipleOfThreeMustReturnFizz()
+    {
+        $this->assertEquals('Fizz', $this->sut->convert(6));
     }
 
     /**
