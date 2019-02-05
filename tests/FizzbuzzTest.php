@@ -2,11 +2,19 @@
 
 class FizzbuzzTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * @test
-     */
-    public function nothing()
+    protected $sut;
+
+    protected function setUp(): void
     {
-        $this->assertTrue(true);
+        $this->sut = new Fizzbuzz();
     }
+
+    /**
+     * @test 
+     */
+    public function oneMustReturnOne()
+    {
+        $this->assertEquals(1, $this->sut->convert(1));
+    }
+
 }
