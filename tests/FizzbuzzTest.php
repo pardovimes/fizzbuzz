@@ -41,4 +41,13 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
         $this->expectException(TypeError::class);
         $this->sut->convert('hello world');
     }
+
+    /**
+     * @test
+     */
+    public function negativeNumberMustThrowException()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->sut->convert(-1);
+    }
 }
