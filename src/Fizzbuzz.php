@@ -2,8 +2,8 @@
 
 class Fizzbuzz
 {
-    public function convert($param)
+    public function convert(int $number)
     {
-        return 1;
+        return $number;
     }
 }
