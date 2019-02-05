@@ -44,6 +44,22 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
+    public function fiveMustReturnBuzz()
+    {
+        $this->assertEquals('Buzz', $this->sut->convert(5));
+    }
+
+    /**
+     * @test
+     */
+    public function multipleOfThreeMustReturnBuzz()
+    {
+        $this->assertEquals('Buzz', $this->sut->convert(10));
+    }
+
+    /**
+     * @test
+     */
     public function passingStringMustThrowException()
     {
         $this->expectException(TypeError::class);
