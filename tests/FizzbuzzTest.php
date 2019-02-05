@@ -12,6 +12,15 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
+    public function noArgumentMustThrowException()
+    {
+        $this->expectException(ArgumentCountError::class);
+        $this->assertEquals(1, $this->sut->convert());
+    }
+
+    /**
+     * @test
+     */
     public function oneMustReturnOne()
     {
         $this->assertEquals(1, $this->sut->convert(1));
