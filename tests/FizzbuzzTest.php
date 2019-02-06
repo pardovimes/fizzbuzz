@@ -12,6 +12,33 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     /**
      * @test
      */
+    public function noParameterMustThrowException()
+    {
+        $this->expectException(ArgumentCountError::class);
+        $this->sut->convert();
+    }
+
+    /**
+     * @test
+     */
+    public function negativeNumberMustThrowException()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->sut->convert(-1);
+    }
+
+    /**
+     * @test
+     */
+    public function zeroNumberMustThrowException()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->sut->convert(0);
+    }
+
+    /**
+     * @test
+     */
     public function oneMustReturnOne()
     {
         $this->assertEquals(1, $this->sut->convert(1));
@@ -32,11 +59,11 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals('Fizz', $this->sut->convert(6));
     }
-    
+
     /**
      * @test
      */
-    public function multipleOfThreeMustReturnBuzz()
+    public function multipleOfFiveMustReturnBuzz()
     {
         $this->assertEquals('Buzz', $this->sut->convert(10));
     }
@@ -56,23 +83,5 @@ class FizzbuzzTest extends \PHPUnit\Framework\TestCase
     {
         $this->expectException(TypeError::class);
         $this->sut->convert('hello world');
-    }
-
-    /**
-     * @test
-     */
-    public function negativeNumberMustThrowException()
-    {
-        $this->expectException(InvalidArgumentException::class);
-        $this->sut->convert(-1);
-    }
-
-    /**
-     * @test
-     */
-    public function zeroNumberMustThrowException()
-    {
-        $this->expectException(InvalidArgumentException::class);
-        $this->sut->convert(0);
     }
 }
